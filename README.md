@@ -1,7 +1,7 @@
-Project Overview
+# Project Overview
 VoiceBot is a scalable and intelligent voicebot system designed to automate outbound voice calls for user engagement campaigns. This solution leverages Google Cloud Text-to-Speech and Speech-to-Text services, multilingual support (English and Hindi), and integrates with Redis, MongoDB, and a dialer API to orchestrate smart conversations based on intent recognition.
 
-📂 Project Structure
+# 📂 Project Structure
 File/Folder	Description
 create_responses.py	Prepares customized responses from responses.json by adjusting names, genders, and translating to target language (e.g., Hindi).
 encodings.py	Converts text responses into audio encodings using Google TTS. Supports multilingual and gender-specific voice synthesis.
@@ -9,7 +9,7 @@ responses.json	Defines the bot's call flow logic and script, structured as conve
 transcribe.py	REST API (FastAPI) to receive base64-encoded audio and transcribe it using Google Speech-to-Text, with support for intent classification and translation.
 utils.py	Shared utility functions for text-to-speech, translation, audio processing, and next-node logic in conversation.
 voicebot.py	Main orchestration server that manages campaign scheduling, API authentication, concurrent call handling, campaign metadata setup, and cleanup.
-🚀 Key Features
+# 🚀 Key Features
 🔊 Text-to-Speech & Speech-to-Text: Uses Google Cloud APIs for realistic voice synthesis and transcription.
 🌐 Multilingual Support: Built-in English and Hindi language capabilities, with gender-based voice customization.
 ⚡ FastAPI Services: Endpoints for transcription, recording, call scheduling, and tracking call status.
@@ -24,7 +24,7 @@ Audio Preparation: Responses from responses.json are translated (if needed), gen
 Call Initiation: Call requests are sent to the dialer via the external API (callAPIRequest). Each call is tracked with a UUID.
 Real-Time Transcription: During a call, customer responses are transcribed and interpreted for intent. Next steps are dynamically decided based on this input.
 Completion & Recording: Upon call conclusion, status and recordings are updated via /status and /recording endpoints.
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 Python 3.9+
 FastAPI
 MongoDB
@@ -34,7 +34,7 @@ pydub, pytz, uuid, base64, tqdm, pandas
 📦 Setup Instructions
 Before you begin, ensure you have your Google Cloud credentials and MongoDB/Redis set up locally or remotely.
 
-Install dependencies
+# Install dependencies
 bash
 Copy
 Edit
