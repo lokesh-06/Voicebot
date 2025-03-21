@@ -1,0 +1,182 @@
+{
+    "var": {
+      "CUSTOMER_NAME": []
+    },
+    "nodes": {
+      "0": {
+        "voicebot_ID": "AiLife_CCOM04",
+        "voicebot_name": "TestVoiceBot",
+        "node_id": "0",
+        "languageID": "en",
+        "intent_check_list":"False",
+        "pause": {
+          "waittime": "15",
+          "silencetime": "3"
+        },
+        "conv_step_name": "Welcome Message",
+        "bot_reply": {
+          "element": [
+            {
+              "encoding": "True",
+              "encoding_key": "0-1",
+              "string": "Hello this is Vector from Vestige."
+            }
+          ]
+        },
+        "user_reply": {
+          "element": [
+            {
+                "intent": "None",
+                "next_node_id": "1"
+              }
+          ]
+        }
+      },
+      "1": {
+        "voicebot_ID": "AiLife_CCOM04",
+        "voicebot_name": "TestVoiceBot",
+        "node_id": "1",
+        "languageID": "en",
+        "intent_check_list": "False",
+        "pause": {
+          "waittime": "5",
+          "silencetime": "2"
+        },
+        "conv_step_name": "Asking for a quick convo!",
+        "bot_reply": {
+          "element": [
+            {
+              "encoding": "True",
+              "encoding_key": "1-1",
+              "string": "We would love to know what inspired you to register with Vestige? You can say things like product quality, income opportunity, Vestige brand name, knowing someone already or anything else that motivated you."
+            }
+          ]
+        },
+        "user_reply": {
+          "element": [
+            {
+              "intent": "None",
+              "next_node_id": "3"
+            }
+          ]
+        }
+      },
+      "2": {
+        "voicebot_ID": "AiLife_CCOM04",
+        "voicebot_name": "TestVoiceBot",
+        "node_id": "2",
+        "languageID": "en",
+        "intent_check_list": "False",
+        "pause": {
+          "waittime": "1",
+          "silencetime": "1"
+        },
+        "conv_step_name": "Thank You, call you later",
+        "bot_reply": {
+          "element": [
+            {
+              "encoding": "True",
+              "encoding_key": "2-1",
+              "string": "Thank you for your time. We will contact you later."
+            }
+          ]
+        }
+      },
+      "3": {
+        "voicebot_ID": "AiLife_CCOM04",
+        "voicebot_name": "TestVoiceBot",
+        "node_id": "3",
+        "languageID": "en",
+        "intent_check_list": "False",
+        "pause": {
+          "waittime": "5",
+          "silencetime": "2"
+        },
+        "conv_step_name": "Asking about challenges",
+        "bot_reply": {
+          "element": [
+            {
+              "encoding": "True",
+              "encoding_key": "3-1",
+              "string": "Did you face any challenges during registration on the website?"
+            }
+          ]
+        },
+        "user_reply": {
+          "element": [
+            {
+              "intent": "None",
+              "next_node_id": "4"
+            }
+          ]
+        }
+      },
+      "4": {
+        "voicebot_ID": "AiLife_CCOM04",
+        "voicebot_name": "TestVoiceBot",
+        "node_id": "4",
+        "languageID": "en",
+        "intent_check_list": [
+          "Yes",
+          "No",
+          "Repeat",
+          "Call_Later"
+        ],
+        "pause": {
+          "waittime": "2",
+          "silencetime": "2"
+        },
+        "conv_step_name": "Schedule call",
+        "bot_reply": {
+          "element": [
+            {
+              "encoding": "True",
+              "encoding_key": "4-1",
+              "string": "Would you like to schedule a call with our associate to discuss how we can assist you further?"
+            }
+          ]
+        },
+        "user_reply": {
+          "element": [
+            {
+              "intent": "Yes",
+              "next_node_id": "5"
+            },
+            {
+              "intent": "No",
+              "next_node_id": "5"
+            },
+            {
+              "intent": "Repeat",
+              "next_node_id": "4"
+            },
+            {
+              "intent": "Call_Later",
+              "next_node_id": "5"
+            }
+          ]
+        }
+      },
+      "5": {
+        "voicebot_ID": "AiLife_CCOM04",
+        "voicebot_name": "TestVoiceBot",
+        "node_id": "5",
+        "languageID": "en",
+        "intent_check_list": "False",
+        "pause": {
+          "waittime": "1",
+          "silencetime": "1"
+        },
+        "conv_step_name": "Thank you , Good Day!",
+        "bot_reply": {
+          "element": [
+            {
+              "encoding": "True",
+              "encoding_key": "5-1",
+              "string": "Thank you for your time. Wishing you wealth!"
+            }
+          ]
+        }
+      }
+    }
+  }
